@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="user-scalable=no, width=device-width" />
+  <title>Something</title>
+
+  <link href="css/reset.css" rel="stylesheet"/>
+  <link href="css/my-style.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/font-awesome.min.css"/>
+
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery&#45;2.2.4.min.js"></script> -->
+  <!-- <script src="js/jquery.mobile.custom.min.js"></script> -->
+  <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile&#45;1.4.5.js"></script> -->
+  <!-- <script src="js/sprintf.js"></script> -->
+  <script src="js/iOSCosas.js"></script>
+
+  </head>
+  <body>
+
+    <button id="show-main">
+      show it
+    </button>
+
+
+    <div id="main-settings" class="settings-page">
+      <div id="to-bouncy-box" class="settings-button">
+        Bouncy Box <span class="pager-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+      </div>
+      <div class="settings-separator"></div>
+    </div>
+
+    <div id="bouncy-box-settings" class="settings-page">
+      <div id="to-bouncy-box-background" class="settings-button">
+        Background <span class="pager-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+      </div>
+      <!-- <div class="settings&#45;separator"></div> -->
+      <div id="to-bouncy-box-foreground" class="settings-button">
+        Boxy's Color <span class="pager-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+      </div>
+    </div>
+
+    <div id="bouncy-box-settings-background-color" class="settings-page">
+      <div id="bouncy-box-bk-black" class="settings-button">Black</div>
+      <div id="bouncy-box-bk-white" class="settings-button">White</div>
+      <div id="bouncy-box-bk-red" class="settings-button">Red</div>
+    </div>
+
+    <div id="bouncy-box-settings-foreground-color" class="settings-page">
+      <div id="bouncy-box-fg-black" class="settings-button">Black</div>
+      <div id="bouncy-box-fg-brown" class="settings-button">Brown</div>
+      <div id="bouncy-box-fg-orange" class="settings-button">Orange</div>
+      <div id="bouncy-box-fg-red" class="settings-button">Red</div>
+      <div id="bouncy-box-fg-yellow" class="settings-button">Yellow</div>
+    </div>
+
+    <script>
+
+    $(document).ready(function(){
+
+      /* settings headers */
+      iOSCosas.page.header($("#main-settings"),
+          { "title": "Settings",
+            "right_item": "Done",
+            "right_fn": function(){
+                          $(".settings-page").each(function(ind){
+                            iOSCosas.page.hide($(this)); }); },
+          });
+
+      iOSCosas.page.header($("#bouncy-box-settings"),
+          {
+            "title": "Bouncy Box",
+            "right_item": "Done",
+            "right_fn": function(){
+                          $(".settings-page").each(function(ind){
+                            iOSCosas.page.hide($(this)); }); },
+            "left_item": "Settings",
+            "left_fn": function(){
+                         iOSCosas.page.hide($("#bouncy-box-settings"), "left") }
+            
+          });
+
+      iOSCosas.page.header($("#bouncy-box-settings-background-color"),
+          {
+            "title": "Background",
+            "right_item": "Done",
+            "right_fn": function(){
+                          $(".settings-page").each(function(ind){
+                            iOSCosas.page.hide($(this)); }); },
+            "left_item": "Bouncy",
+            "left_fn": function(){
+                         iOSCosas.page.hide($("#bouncy-box-settings-background-color"), "left") }
+          });
+
+
+      iOSCosas.page.header($("#bouncy-box-settings-foreground-color"),
+          {
+            "title": "Boxy's Color",
+            "right_item": "Done",
+            "right_fn": function(){
+                          $(".settings-page").each(function(ind){
+                            iOSCosas.page.hide($(this)); }); },
+            "left_item": "Bouncy",
+            "left_fn": function(){
+                         iOSCosas.page.hide($("#bouncy-box-settings-foreground-color"), "left") }
+          });
+
+
+
+
+      iOSCosas.utils.on_click($("#show-main"),
+          function(){ iOSCosas.page.display($("#main-settings"), "right"); });
+
+      iOSCosas.utils.on_click($("#main-done"),
+          function(){ iOSCosas.page.hide($("#main-settings"), "left"); });
+
+      iOSCosas.utils.on_click($("#to-bouncy-box"),
+          function(){ iOSCosas.page.display($("#bouncy-box-settings"), "right"); });
+
+      iOSCosas.utils.on_click($("#back-to-main"),
+          function(){ iOSCosas.page.hide($("#bouncy-box-settings"), "left"); });
+
+      iOSCosas.utils.on_click($("#to-bouncy-box-background"),
+          function(){ iOSCosas.page.display($("#bouncy-box-settings-background-color"), "right"); });
+
+      iOSCosas.utils.on_click($("#to-bouncy-box-foreground"),
+          function(){ iOSCosas.page.display($("#bouncy-box-settings-foreground-color"), "right"); });
+
+      iOSCosas.utils.on_click($("#bouncy-box-bk-black"),
+        function(){
+          $("body").css("background", "black");
+          iOSCosas.page.hide($("#bouncy-box-settings-background-color"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#bouncy-box-bk-red"),
+        function(){
+          $("body").css("background", "red");
+          iOSCosas.page.hide($("#bouncy-box-settings-background-color"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#bouncy-box-bk-white"),
+        function(){
+          $("body").css("background", "white");
+          iOSCosas.page.hide($("#bouncy-box-settings-background-color"), "left");
+        });
+
+      iOSCosas.init();
+
+      $(".settings-page").each(function(ind){
+        iOSCosas.page.hide($(this));
+      });
+      
+
+    });
+
+    </script>
+
+  </body>
+</html>
+
+
+

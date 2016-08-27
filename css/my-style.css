@@ -1,0 +1,90 @@
+@CHARSET "UTF-8";
+
+* { box-sizing: border-box; }
+
+body, h1, h2, h3, h4, h5, h6, p, ul, dl, ol, form, fieldset, input, label, table, tbody, tfoot, th, tr, td, textarea, select {
+    font-family: "helvetica neue", helvetica, "lucinda sans unicode", "sans serif";
+    font-family: system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", "san serif";
+    font-weight: normal;
+    color: #333;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font-size: 18px;
+}
+
+
+button{
+    font-size: 100%
+}
+
+.settings-page{
+    background: #efeff4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.settings-button{
+    width: 100%;
+    /* margin-top: 20px; */
+    /* margin-bottom: 20px; */
+    background: white; /* !!!! */
+    padding: 15px;
+}
+
+.settings-separator{
+    width: 100%;
+    background: #efeff4;
+    color: #efeff4;
+    height: 40px;
+}
+
+
+
+.settings-header{
+    width: 100%;
+    background: white;
+    padding: 10px;
+    padding-top: 25px;
+    margin-bottom: 30px;
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
+    text-align: center;
+    /* visibility: hidden; */
+    border-bottom-style: solid;
+    border-bottom-color #c8c7cc;
+    border-bottom-width: 1px;
+    font-weight: bold;
+    font-size: 95%;
+}
+
+.settings-header-left-item{
+    position: absolute;
+    left: 0;
+    padding-left: 10px;
+    color: #177efb;
+    font-weight: normal;
+}
+
+.settings-header-right-item{
+    position: absolute;
+    right: 0;
+    padding-right: 10px;
+    color: #177efb;
+    font-weight: normal;
+}
+
+.pager-right{
+    color: #c7c7cc;
+    position: absolute;
+    right: 0;
+    padding-right: 15px;
+    font-weight: normal;
+}
+
+.fa{
+    font-size: 120%;
+}
