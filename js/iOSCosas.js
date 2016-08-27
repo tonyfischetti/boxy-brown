@@ -48,14 +48,14 @@
 
                 if(obj.left_item && obj.left_fn){
                     a_settings_page.on(appropriate_target,
-                                       ".settings-header-right-item",
-                                       function(){ obj.right_fn(); }); 
+                                       ".settings-header-left-item",
+                                       function(event){ event.stopPropagation(); obj.left_fn(); }); 
                 }
 
                 if(obj.right_item && obj.right_fn){
                     a_settings_page.on(appropriate_target,
-                                       ".settings-header-left-item",
-                                       function(){ obj.left_fn(); }); 
+                                       ".settings-header-right-item",
+                                       function(event){ event.stopPropagation(); obj.right_fn(); }); 
                 }
 
             },
@@ -122,13 +122,4 @@
         }
     }
 }();
-
-
-// $("body").on("click touchend", ".settings-header-exit", function(){
-//     console.log("maybe");
-//     $(".settings-page").each(function(ind){
-//         settings.page.hide($(this));
-//     });
-// });
-
 

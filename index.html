@@ -1,61 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="cache.manifest">
   <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <meta name="apple-mobile-web-app-capable" content="yes"/>
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="viewport" content="user-scalable=no, width=device-width" />
-  <title>Something</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="user-scalable=no, width=device-width" />
+    <title>Boxy Brown</title>
 
-  <link href="css/reset.css" rel="stylesheet"/>
-  <link href="css/my-style.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="apple-touch-icon" href="./resources/boxy-logo.png"/>
 
-  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-  <!-- <script src="https://code.jquery.com/jquery&#45;2.2.4.min.js"></script> -->
-  <!-- <script src="js/jquery.mobile.custom.min.js"></script> -->
-  <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile&#45;1.4.5.js"></script> -->
-  <!-- <script src="js/sprintf.js"></script> -->
-  <script src="js/iOSCosas.js"></script>
+    <link href="css/reset.css" rel="stylesheet"/>
+    <link href="css/my-style.css" rel="stylesheet"/> <!-- rename this -->
+    <link href="css/boxy-brown.css" rel="stylesheet"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+
+    <!-- <script src="https://code.jquery.com/jquery&#45;3.1.0.min.js"></script> -->
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/iOSCosas.js"></script>
+    <script src="js/boxy-brown.js"></script>
 
   </head>
   <body>
 
-    <button id="show-main">
-      show it
-    </button>
+    <div id="boxy-brown"></div>
+
+    <div id="the-clock"></div>
 
 
     <div id="main-settings" class="settings-page">
-      <div id="to-bouncy-box" class="settings-button">
+      <div id="to-boxy-brown" class="settings-button">
         Bouncy Box <span class="pager-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
       </div>
       <div class="settings-separator"></div>
     </div>
 
-    <div id="bouncy-box-settings" class="settings-page">
-      <div id="to-bouncy-box-background" class="settings-button">
+    <div id="boxy-brown-settings" class="settings-page">
+      <div id="to-boxy-brown-background" class="settings-button">
         Background <span class="pager-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
       </div>
-      <!-- <div class="settings&#45;separator"></div> -->
-      <div id="to-bouncy-box-foreground" class="settings-button">
+      <div id="to-boxy-brown-foreground" class="settings-button">
         Boxy's Color <span class="pager-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+      </div>
+      <div id="to-boxy-brown-size" class="settings-button">
+        Boxy's Size <span class="pager-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+      </div>
+      <div id="to-boxy-brown-speed" class="settings-button">
+        Boxy's Speed <span class="pager-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+      </div>
+      <div class="settings-separator"></div>
+      <div id="to-clock-settings" class="settings-button">
+        Clock Settings <span class="pager-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+      </div>
+      <div class="settings-separator"></div>
+    </div>
+
+    <div id="boxy-brown-settings-background-color" class="settings-page">
+      <div id="boxy-brown-bk-black" class="settings-button bk-toggle">Black</div>
+      <div id="boxy-brown-bk-white" class="settings-button bk-toggle">White<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span></div>
+      <div id="boxy-brown-bk-red" class="settings-button bk-toggle">Red</div>
+    </div>
+
+    <div id="boxy-brown-settings-foreground-color" class="settings-page">
+      <div id="boxy-brown-fg-black" class="settings-button fg-toggle">Black</div>
+      <div id="boxy-brown-fg-brown" class="settings-button fg-toggle">Brown<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span></div>
+      <div id="boxy-brown-fg-orange" class="settings-button fg-toggle">Orange</div>
+      <div id="boxy-brown-fg-red" class="settings-button fg-toggle">Red</div>
+      <div id="boxy-brown-fg-yellow" class="settings-button fg-toggle">Yellow</div>
+      <div id="boxy-brown-fg-white" class="settings-button fg-toggle">White</div>
+      <div id="boxy-brown-fg-aqua" class="settings-button fg-toggle">Aqua</div>
+      <div id="boxy-brown-fg-lightgreen" class="settings-button fg-toggle">Green</div>
+    </div>
+
+    <div id="boxy-brown-settings-boxy-size" class="settings-page">
+      <div id="boxy-brown-size-xsmall" class="settings-button size-toggle">Extra Small</div>
+      <div id="boxy-brown-size-small" class="settings-button size-toggle">Small</div>
+      <div id="boxy-brown-size-medium" class="settings-button size-toggle">Medium<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span></div>
+      <div id="boxy-brown-size-large" class="settings-button size-toggle">Large</div>
+      <div id="boxy-brown-size-xlarge" class="settings-button size-toggle">Extra Large</div>
+    </div>
+
+    <div id="boxy-brown-settings-boxy-speed" class="settings-page">
+      <div id="boxy-brown-speed-xslow" class="settings-button speed-toggle">Extra Slow</div>
+      <div id="boxy-brown-speed-slow" class="settings-button speed-toggle">Slow</div>
+      <div id="boxy-brown-speed-medium" class="settings-button speed-toggle">Medium<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span></div>
+      <div id="boxy-brown-speed-fast" class="settings-button speed-toggle">Fast</div>
+      <div id="boxy-brown-speed-xfast" class="settings-button speed-toggle">Extra Fast</div>
+    </div>
+
+    <div id="boxy-brown-settings-clock" class="settings-page">
+      <div id="boxy-brown-clock-on" class="settings-button clock-display-toggle">Display Clock<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span></div>
+      <div id="boxy-brown-clock-off" class="settings-button clock-display-toggle">Hide Clock</div>
+      <div class="settings-separator"></div>
+      <div id="to-clock-color" class="settings-button">
+        Clock Color <span class="pager-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
       </div>
     </div>
 
-    <div id="bouncy-box-settings-background-color" class="settings-page">
-      <div id="bouncy-box-bk-black" class="settings-button">Black</div>
-      <div id="bouncy-box-bk-white" class="settings-button">White</div>
-      <div id="bouncy-box-bk-red" class="settings-button">Red</div>
-    </div>
-
-    <div id="bouncy-box-settings-foreground-color" class="settings-page">
-      <div id="bouncy-box-fg-black" class="settings-button">Black</div>
-      <div id="bouncy-box-fg-brown" class="settings-button">Brown</div>
-      <div id="bouncy-box-fg-orange" class="settings-button">Orange</div>
-      <div id="bouncy-box-fg-red" class="settings-button">Red</div>
-      <div id="bouncy-box-fg-yellow" class="settings-button">Yellow</div>
+    <div id="clock-color" class="settings-page">
+      <div id="clock-fg-black" class="settings-button clock-color-toggle">Black</div>
+      <div id="clock-fg-gray" class="settings-button clock-color-toggle">Gray<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span></div>
+      <div id="clock-fg-brown" class="settings-button clock-color-toggle">Brown</div>
+      <div id="clock-fg-orange" class="settings-button clock-color-toggle">Orange</div>
+      <div id="clock-fg-red" class="settings-button clock-color-toggle">Red</div>
+      <div id="clock-fg-yellow" class="settings-button clock-color-toggle">Yellow</div>
+      <div id="clock-fg-white" class="settings-button clock-color-toggle">White</div>
+      <div id="clock-fg-aqua" class="settings-button clock-color-toggle">Aqua</div>
+      <div id="clock-fg-lightgreen" class="settings-button clock-color-toggle">Green</div>
     </div>
 
     <script>
@@ -63,96 +114,474 @@
     $(document).ready(function(){
 
       /* settings headers */
-      iOSCosas.page.header($("#main-settings"),
-          { "title": "Settings",
-            "right_item": "Done",
-            "right_fn": function(){
-                          $(".settings-page").each(function(ind){
-                            iOSCosas.page.hide($(this)); }); },
-          });
-
-      iOSCosas.page.header($("#bouncy-box-settings"),
+      iOSCosas.page.header($("#boxy-brown-settings"),
           {
-            "title": "Bouncy Box",
+            "title": "Settings",
             "right_item": "Done",
             "right_fn": function(){
                           $(".settings-page").each(function(ind){
                             iOSCosas.page.hide($(this)); }); },
-            "left_item": "Settings",
-            "left_fn": function(){
-                         iOSCosas.page.hide($("#bouncy-box-settings"), "left") }
-            
           });
 
-      iOSCosas.page.header($("#bouncy-box-settings-background-color"),
+      iOSCosas.page.header($("#boxy-brown-settings-background-color"),
           {
             "title": "Background",
             "right_item": "Done",
             "right_fn": function(){
                           $(".settings-page").each(function(ind){
                             iOSCosas.page.hide($(this)); }); },
-            "left_item": "Bouncy",
+            "left_item": "Settings",
             "left_fn": function(){
-                         iOSCosas.page.hide($("#bouncy-box-settings-background-color"), "left") }
+                         iOSCosas.page.hide($("#boxy-brown-settings-background-color"), "left") }
           });
 
 
-      iOSCosas.page.header($("#bouncy-box-settings-foreground-color"),
+      iOSCosas.page.header($("#boxy-brown-settings-foreground-color"),
           {
             "title": "Boxy's Color",
             "right_item": "Done",
             "right_fn": function(){
                           $(".settings-page").each(function(ind){
                             iOSCosas.page.hide($(this)); }); },
-            "left_item": "Bouncy",
+            "left_item": "Settings",
             "left_fn": function(){
-                         iOSCosas.page.hide($("#bouncy-box-settings-foreground-color"), "left") }
+                         iOSCosas.page.hide($("#boxy-brown-settings-foreground-color"), "left") }
+          });
+
+      iOSCosas.page.header($("#boxy-brown-settings-boxy-size"),
+          {
+            "title": "Boxy's Size",
+            "right_item": "Done",
+            "right_fn": function(){
+                          $(".settings-page").each(function(ind){
+                            iOSCosas.page.hide($(this)); }); },
+            "left_item": "Settings",
+            "left_fn": function(){
+                         iOSCosas.page.hide($("#boxy-brown-settings-boxy-size"), "left") }
+          });
+
+      iOSCosas.page.header($("#boxy-brown-settings-boxy-speed"),
+          {
+            "title": "Boxy's Speed",
+            "right_item": "Done",
+            "right_fn": function(){
+                          $(".settings-page").each(function(ind){
+                            iOSCosas.page.hide($(this)); }); },
+            "left_item": "Settings",
+            "left_fn": function(){
+                         iOSCosas.page.hide($("#boxy-brown-settings-boxy-speed"), "left") }
+          });
+
+      iOSCosas.page.header($("#boxy-brown-settings-clock"),
+          {
+            "title": "Clock Settings",
+            "right_item": "Done",
+            "right_fn": function(){
+                          $(".settings-page").each(function(ind){
+                            iOSCosas.page.hide($(this)); }); },
+            "left_item": "Settings",
+            "left_fn": function(){
+                         iOSCosas.page.hide($("#boxy-brown-settings-clock"), "left") }
+          });
+
+      iOSCosas.page.header($("#clock-color"),
+          {
+            "title": "Clock Color",
+            "right_item": "Done",
+            "right_fn": function(){
+                          $(".settings-page").each(function(ind){
+                            iOSCosas.page.hide($(this)); }); },
+            "left_item": "Clock Settings",
+            "left_fn": function(){
+                         iOSCosas.page.hide($("#clock-color"), "left") }
           });
 
 
+      iOSCosas.utils.on_click($(document),
+          function(event){
+            if(event.target.nodeName==="HTML" || (event.target.nodeName==="DIV" && event.target.id==="the-clock")){
+              iOSCosas.page.display($("#boxy-brown-settings"), "right");
+            }
+          });
 
-
-      iOSCosas.utils.on_click($("#show-main"),
-          function(){ iOSCosas.page.display($("#main-settings"), "right"); });
-
-      iOSCosas.utils.on_click($("#main-done"),
-          function(){ iOSCosas.page.hide($("#main-settings"), "left"); });
-
-      iOSCosas.utils.on_click($("#to-bouncy-box"),
-          function(){ iOSCosas.page.display($("#bouncy-box-settings"), "right"); });
+      iOSCosas.utils.on_click($("#to-boxy-brown"),
+          function(event){
+            event.stopPropagation();
+            iOSCosas.page.display($("#boxy-brown-settings"), "right");
+          });
 
       iOSCosas.utils.on_click($("#back-to-main"),
-          function(){ iOSCosas.page.hide($("#bouncy-box-settings"), "left"); });
+          function(event){
+            iOSCosas.page.hide($("#boxy-brown-settings"), "left");
+          });
 
-      iOSCosas.utils.on_click($("#to-bouncy-box-background"),
-          function(){ iOSCosas.page.display($("#bouncy-box-settings-background-color"), "right"); });
+      iOSCosas.utils.on_click($("#to-boxy-brown-background"),
+          function(event){
+            event.stopPropagation();
+            iOSCosas.page.display($("#boxy-brown-settings-background-color"), "right");
+          });
 
-      iOSCosas.utils.on_click($("#to-bouncy-box-foreground"),
-          function(){ iOSCosas.page.display($("#bouncy-box-settings-foreground-color"), "right"); });
+      iOSCosas.utils.on_click($("#to-boxy-brown-foreground"),
+          function(event){
+            event.stopPropagation();
+            iOSCosas.page.display($("#boxy-brown-settings-foreground-color"), "right");
+          });
 
-      iOSCosas.utils.on_click($("#bouncy-box-bk-black"),
-        function(){
+      iOSCosas.utils.on_click($("#to-boxy-brown-size"),
+          function(event){
+            event.stopPropagation();
+            iOSCosas.page.display($("#boxy-brown-settings-boxy-size"), "right");
+          });
+
+      iOSCosas.utils.on_click($("#to-boxy-brown-speed"),
+          function(event){
+            event.stopPropagation();
+            iOSCosas.page.display($("#boxy-brown-settings-boxy-speed"), "right");
+          });
+
+      iOSCosas.utils.on_click($("#to-clock-settings"),
+          function(event){
+            event.stopPropagation();
+            iOSCosas.page.display($("#boxy-brown-settings-clock"), "right");
+          });
+
+      iOSCosas.utils.on_click($("#to-clock-color"),
+          function(event){
+            event.stopPropagation();
+            iOSCosas.page.display($("#clock-color"), "right");
+          });
+
+
+      iOSCosas.utils.on_click($("#boxy-brown-bk-black"),
+        function(event){
+          event.stopPropagation();
           $("body").css("background", "black");
-          iOSCosas.page.hide($("#bouncy-box-settings-background-color"), "left");
+          $(".bk-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-bk-black").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          //iOSCosas.page.hide($("#boxy-brown-settings-background-color"), "left");
         });
 
-      iOSCosas.utils.on_click($("#bouncy-box-bk-red"),
-        function(){
+      iOSCosas.utils.on_click($("#boxy-brown-bk-red"),
+        function(event){
+          event.stopPropagation();
           $("body").css("background", "red");
-          iOSCosas.page.hide($("#bouncy-box-settings-background-color"), "left");
+          $(".bk-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-bk-red").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          //iOSCosas.page.hide($("#boxy-brown-settings-background-color"), "left");
         });
 
-      iOSCosas.utils.on_click($("#bouncy-box-bk-white"),
-        function(){
+      iOSCosas.utils.on_click($("#boxy-brown-bk-white"),
+        function(event){
+          event.stopPropagation();
           $("body").css("background", "white");
-          iOSCosas.page.hide($("#bouncy-box-settings-background-color"), "left");
+          $(".bk-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-bk-white").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          //iOSCosas.page.hide($("#boxy-brown-settings-background-color"), "left");
         });
+
+      iOSCosas.utils.on_click($("#boxy-brown-fg-black"),
+        function(event){
+          event.stopPropagation();
+          $("#boxy-brown").css("background-color", "black");
+          $(".fg-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-fg-black").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#boxy-brown-settings-foreground-color"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#boxy-brown-fg-brown"),
+        function(event){
+          event.stopPropagation();
+          $("#boxy-brown").css("background-color", "brown");
+          $(".fg-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-fg-brown").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#boxy-brown-settings-foreground-color"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#boxy-brown-fg-orange"),
+        function(event){
+          event.stopPropagation();
+          $("#boxy-brown").css("background-color", "orange");
+          $(".fg-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-fg-orange").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#boxy-brown-settings-foreground-color"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#boxy-brown-fg-red"),
+        function(event){
+          event.stopPropagation();
+          $("#boxy-brown").css("background-color", "red");
+          $(".fg-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-fg-red").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#boxy-brown-settings-foreground-color"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#boxy-brown-fg-yellow"),
+        function(event){
+          event.stopPropagation();
+          $("#boxy-brown").css("background-color", "yellow");
+          $(".fg-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-fg-yellow").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#boxy-brown-settings-foreground-color"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#boxy-brown-fg-white"),
+        function(event){
+          event.stopPropagation();
+          $("#boxy-brown").css("background-color", "white");
+          $(".fg-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-fg-white").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#boxy-brown-settings-foreground-color"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#boxy-brown-fg-aqua"),
+        function(event){
+          event.stopPropagation();
+          $("#boxy-brown").css("background-color", "aqua");
+          $(".fg-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-fg-aqua").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#boxy-brown-settings-foreground-color"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#boxy-brown-fg-lightgreen"),
+        function(event){
+          event.stopPropagation();
+          $("#boxy-brown").css("background-color", "lightgreen");
+          $(".fg-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-fg-lightgreen").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#boxy-brown-settings-foreground-color"), "left");
+        });
+      iOSCosas.utils.on_click($("#boxy-brown-size-xlarge"),
+        function(event){
+          event.stopPropagation();
+          restart();
+          update_size(300);
+          $(".size-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-size-xlarge").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#boxy-brown-settings-boxy-size"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#boxy-brown-size-large"),
+        function(event){
+          event.stopPropagation();
+          restart();
+          update_size(190);
+          $(".size-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-size-large").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#boxy-brown-settings-boxy-size"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#boxy-brown-size-medium"),
+        function(event){
+          event.stopPropagation();
+          restart();
+          update_size(100);
+          $(".size-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-size-medium").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#boxy-brown-settings-boxy-size"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#boxy-brown-size-small"),
+        function(event){
+          event.stopPropagation();
+          restart();
+          update_size(50);
+          $(".size-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-size-small").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#boxy-brown-settings-boxy-size"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#boxy-brown-size-xsmall"),
+        function(event){
+          event.stopPropagation();
+          restart();
+          update_size(20);
+          $(".size-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-size-xsmall").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#boxy-brown-settings-boxy-size"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#boxy-brown-speed-xfast"),
+        function(event){
+          event.stopPropagation();
+          restart();
+          update_speed(5);
+          $(".speed-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-speed-xfast").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#boxy-brown-settings-boxy-speed"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#boxy-brown-speed-fast"),
+        function(event){
+          event.stopPropagation();
+          restart();
+          update_speed(3);
+          $(".speed-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-speed-fast").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#boxy-brown-settings-boxy-speed"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#boxy-brown-speed-medium"),
+        function(event){
+          event.stopPropagation();
+          restart();
+          update_speed(2);
+          $(".speed-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-speed-medium").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#boxy-brown-settings-boxy-speed"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#boxy-brown-speed-slow"),
+        function(event){
+          event.stopPropagation();
+          restart();
+          update_speed(1);
+          $(".speed-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-speed-slow").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#boxy-brown-settings-boxy-speed"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#boxy-brown-speed-xslow"),
+        function(event){
+          event.stopPropagation();
+          restart();
+          update_speed(0.7);
+          $(".speed-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-speed-xslow").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#boxy-brown-settings-boxy-speed"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#boxy-brown-clock-on"),
+        function(event){
+          event.stopPropagation();
+          $("#the-clock").css("visibility", "visible");
+          $(".clock-display-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-clock-on").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+        });
+
+      iOSCosas.utils.on_click($("#boxy-brown-clock-off"),
+        function(event){
+          event.stopPropagation();
+          $("#the-clock").css("visibility", "hidden");
+          $(".clock-display-toggle").find("span").remove(".checkmark-right");
+          $("#boxy-brown-clock-off").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+        });
+
+      iOSCosas.utils.on_click($("#clock-fg-black"),
+        function(event){
+          event.stopPropagation();
+          $("#the-clock").css("color", "black");
+          $(".clock-color-toggle").find("span").remove(".checkmark-right");
+          $("#clock-fg-black").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#clock-color"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#clock-fg-gray"),
+        function(event){
+          event.stopPropagation();
+          $("#the-clock").css("color", "gray");
+          $(".clock-color-toggle").find("span").remove(".checkmark-right");
+          $("#clock-fg-gray").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#clock-color"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#clock-fg-brown"),
+        function(event){
+          event.stopPropagation();
+          $("#the-clock").css("color", "brown");
+          $(".clock-color-toggle").find("span").remove(".checkmark-right");
+          $("#clock-fg-brown").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#clock-color"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#clock-fg-orange"),
+        function(event){
+          event.stopPropagation();
+          $("#the-clock").css("color", "orange");
+          $(".clock-color-toggle").find("span").remove(".checkmark-right");
+          $("#clock-fg-orange").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#clock-color"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#clock-fg-red"),
+        function(event){
+          event.stopPropagation();
+          $("#the-clock").css("color", "red");
+          $(".clock-color-toggle").find("span").remove(".checkmark-right");
+          $("#clock-fg-red").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#clock-color"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#clock-fg-yellow"),
+        function(event){
+          event.stopPropagation();
+          $("#the-clock").css("color", "yellow");
+          $(".clock-color-toggle").find("span").remove(".checkmark-right");
+          $("#clock-fg-yellow").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#clock-color"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#clock-fg-white"),
+        function(event){
+          event.stopPropagation();
+          $("#the-clock").css("color", "white");
+          $(".clock-color-toggle").find("span").remove(".checkmark-right");
+          $("#clock-fg-white").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#clock-color"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#clock-fg-aqua"),
+        function(event){
+          event.stopPropagation();
+          $("#the-clock").css("color", "aqua");
+          $(".clock-color-toggle").find("span").remove(".checkmark-right");
+          $("#clock-fg-aqua").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#clock-color"), "left");
+        });
+
+      iOSCosas.utils.on_click($("#clock-fg-lightgreen"),
+        function(event){
+          event.stopPropagation();
+          $("#the-clock").css("color", "lightgreen");
+          $(".clock-color-toggle").find("span").remove(".checkmark-right");
+          $("#clock-fg-lightgreen").append('<span class="checkmark-right"><i class="fa fa-check" aria-hidden="true"></i></span>');
+          // iOSCosas.page.hide($("#clock-color"), "left");
+        });
+
 
       iOSCosas.init();
 
       $(".settings-page").each(function(ind){
         iOSCosas.page.hide($(this));
       });
+
+
+      ///////////////
+      ///////////////
+
+      update_app_dimensions();
+      initialize_boxy_brown();
+      reposition_clock();
+      update_clock();
+
+      $(window).resize(function() {
+        update_app_dimensions();
+        restart();
+        reposition_clock();
+      });
+      document.addEventListener("orientationchange", function() {
+        update_app_dimensions();
+        restart();
+        reposition_clock();
+      });
+
+      /* start animation tick */
+      setInterval(tick, TICKSPEED);
+      
+      setInterval(update_clock, 15000)
+
+      ///////////////
+      ///////////////
+
       
 
     });

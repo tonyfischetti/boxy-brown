@@ -1,0 +1,29 @@
+CACHE MANIFEST
+# v.2
+
+CACHE:
+css/boxy-brown.css
+css/font-awesome.min.css
+css/my-style.css
+css/my-style.css
+css/reset.css
+fonts/fontawesome-webfont.eot
+fonts/fontawesome-webfont.svg
+fonts/fontawesome-webfont.ttf
+fonts/fontawesome-webfont.woff
+fonts/fontawesome-webfont.woff2
+fonts/FontAwesome.otf
+js/boxy-brown.js
+js/iOSCosas.js
+js/jquery-3.1.0.min.js
+resources/boxy-logo.png
+
+NETWORK:
+*
+
+FALLBACK:
+fonts/fontawesome-webfont.woff fonts/fontawesome-webfont.woff
+fonts/fontawesome-webfont.eot  fonts/fontawesome-webfont.eot
+fonts/fontawesome-webfont.svg  fonts/fontawesome-webfont.svg
+fonts/fontawesome-webfont.ttf  fonts/fontawesome-webfont.ttf
+fonts/FontAwesome.otf          fonts/FontAwesome.otf

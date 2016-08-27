@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+
+#boxy-brown {
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 0px;
+    background-color: brown;
+    width: 0px;
+    height: 0px;
+}
+
+#the-clock {
+    width: 99%;
+    margin: auto;
+    color: gray;
+    text-align: center;
+    font-size: 105px;
+    position: fixed;
+}
