@@ -2,7 +2,7 @@
 
 ### A htm5l+css3+javascript screensaver-type iPhone app 
 
-![screenshot](./resources/screenshot.png)
+![screenshot](./resources/ss-smaller.png)
 
 This screensaver-type app is just a bouncy box and a clock. I put it on
 my dock and leave it on while I sleep (like an alarm clock). The speed,
